@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.5 Function Return Values</title>
+</head>
+
+<body>
+  <h1>6.5 Function Return Values</h1>
+  <section>
+    <h2>Objectives</h2>
+    <ul>
+      <li>To be able to define a function that calculates and returns a value</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Notes</h2>
+    <h3>Function Return Values</h3>
+    <p>
+      Parameters are a way of passing data into a function. <i>Return</i> values are a way for functions to pass data back to
+      the point the function was called at.<br>
+      <br>
+      <u>Syntax</u><br>
+      <code>return <i>value</i>;</code> where <code><i>value</i></code> is a literal string, integer, float, or boolean,
+      expression, or a variable containing a value.<br>
+      <br>
+      <u>Example</u>
+      <code>
+        <pre>
+1 function start() {
+2   var result = double(10);
+3 }
+4 
+5 function double(num){
+6   return 2 * num;
+7 }        </pre>
+      </code>
+      On line 2, <code>double(10)</code> jumps down to line 5 where <code>10</code> is stored in the <code>num</code>
+      parameter. On line 6, <code>num</code> is
+      multiplied by 2, which results in the value <code>20</code>. This value is then <i>returned</i> to the point of
+      the function
+      call on line 2 and stored into the variable <code>result</code>.
+    </p>
+    <h3>Return statements</h3>
+    <p>
+      <code>return value;</code> is called a <i>return statement</i>. A <i>return</i> statement <b>ends the function execution,
+        even if there are lines after the <i>return</i> statement,</b> and <i>returns</i> execution to the point of the function call. 
+        It's similar to <code>break</code> in a loop<br>
+      <br>
+      <u>Example</u>
+      <code>
+        <pre>
+1 function doSomething() {
+2   var num = 20;
+3   num += 50;
+4   return num;
+5   // The statements below will never be reached because of the return statement above
+6   num = 100;
+7   return num;
+8   // Any thing after the line above will be skipped         
+9 }</pre>
+      </code>
+    </p>
+  </section>
+
+  <section>
+    <h2>Working Example</h2>
+    <p>Write a function named <code>areaOfRect()</code> that returns the area of a rectangle given the rectangle's length and width. Then, use the
+      function to calculate and display using <code>alert()</code> the combined area of two rectangles<br>
+      <code>areaOfRect(10, 20)</code> should return <code>200</code>
+    </p>
+        
+      <button onclick="example()">Test example</button>
+  </section>
+
+  <section>
+    <h2>Problem 1</h2>
+    <p>
+      Write and test a function named <code>isEven()</code> that will take an integer as a parameter and return <code>true</code> if the integer is even and <code>false</code> if it's odd. Display the result in an alert<br>
+      <code>isEven(10)</code> should return <code>true</code><br>
+      <code>isEven(231)</code> should return <code>false</code><br>
+      <i>Hint #1: You will need to use an if-else statement</i><br>
+      <i>Hint #2: A number is even if there is a remainder of zero when divided by two. (Look up modulus if that isn't enough of a hint)</i><br>
+    </p>
+    <button onclick="problem1()">Test problem 1</button>
+  </section>
+
+  <section>
+    <h2>Problem 2</h2>
+    <p>
+      Write and test a function name <code>min()</code> that takes two number parameters and returns whichever is smaller. Display the result in an alert.<br>
+      <code>min(10, 20)</code> should return <code>10</code><br>
+      <code>min(57, -1)</code> should return <code>-1</code><br>
+    </p>
+    <button onclick="problem2()">Test problem 2</button>
+  </section>
+</body>
+
+<script src="return-values.js"></script>
+
+<style>
+  section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 8px;
+  }
+
+  pre {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    border-bottom: 2px solid blue;
+  }
+</style>
+
+</html>
