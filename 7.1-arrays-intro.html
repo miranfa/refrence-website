@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.1 Intro to Arrays and Lists</title>
+</head>
+
+<body>
+  <h1>7.1 Intro to Arrays and Lists</h1>
+
+  <section>
+    <h2>Objectives</h2>
+    <p>
+      To be able to declare an array with values<br>
+      To be able to access and assign elements to an array using subscript [ ] notation
+    </p>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+    <h3>Variables</h3>
+    <p>
+      <b>Recall:</b> Variables are named locations in memory that we can store data in - essentially a box with a name
+      we
+      can put something in.
+      <br>
+      We've been limited though, because a variable can only store one piece of data at a time. If we needed to store 12
+      names, we would need to create 12 variables. One to hold each name.
+    </p>
+    <br>
+    <h3>Arrays and Lists</h3>
+    <p>
+      An array or list solves that problem by allowing us to create one variable that holds multiple items.<br>
+      <br>
+      <u>Definition</u><br>
+      An <b>array</b> is an ordered collection of data. The data can be any data type (int, float, string, boolean, or
+      object). Each item in the array is numbered based on its position within the array, starting with zero. This
+      number is called its <i>index</i><br>
+      <br>
+      <u>Syntax examples to declare array variables</u> (remember, declare means to create)<br>
+      <code>
+        <pre>
+var arr = ["first item", "second item", "third item"]; // An array with three strings
+var names = ["John", "Jacob", "Jinglheimerschmidt"]; // An array with three strings 
+var nums = [10, 12, 0, -15]; // An array with 4 ints
+        </pre>
+      </code>
+      The square brackets [] tell the interpreter to create an array variable. Each item in the array is separated by a
+      comma.<br>
+      We often use plurals to name array variables because they often hold multiple, similar types of data ex.
+      <code>names</code> for a list of names.<br>
+      <br>
+
+    <h3>Array Terminology</h3>
+    <ul>
+      <li><b>Array or list:</b> the data type that can hold an ordered list of values. In JavaScript, arrays and lists
+        are the same thing. In other programming languages array is the basic version of </li>
+      <li><b>Element or item:</b> the value of one item in the array</li>
+      <li><b>index:</b> the numerical position of an element in the array with 0 being the index of the first element
+      </li>
+      <li><b>length: </b> the number of elements in the array</li>
+    </ul>
+    <u>Example</u><br>
+    <code>
+        <pre>
+var cities = ["Tucson", "Phoenix", "Mesa", "Flagstaff"];
+        </pre>
+      </code>
+    <code>cities</code> is the name of the variable that holds the array<br>
+    <code>cities</code> has a <i>length</i> of <code>4</code>.<br>
+    The first <i>element</i> in the array is <code>"Tucson"</code>. The <i>index</i> of <code>"Tucson"</code> is
+    <code>0</code>
+
+    <h3>Accessing and Assigning Values in an Array</h3>
+    <p>
+      To access (get the value) and assign (change the value) in an array, we use subscript or square bracket []
+      notation to specify the index we want to access or assign to.<br>
+      <br>
+      <u>Example</u>
+      <code>
+          <pre>
+// Declare an array of student names
+var topStudents = ["Christian", "Kristian", "Shakka", "Jaime", "AJ"];
+// Access the first element to store in a variable (index 0)
+var student = topStudents[0];
+// Assign the third element (index 2) to be "Alexa"
+topStudents[2] = "Alexa";
+          </pre>
+        </code>
+      <button onclick="example()">Run example</button>
+    </p>
+  </section>
+
+  <section>
+    <h2>Problem #1</h2>
+    <p>
+      In the function connected to the onclick of the button below, create an array of the top 5 places you would like
+      to travel called
+      travelList. Use an alert() to print out the element at index 2.
+    </p>
+    <button onclick="problem1()">Test problem 1</button>
+  </section>
+
+  <section>
+    <h2>Problem #2</h2>
+    <p>
+      In the function connected to the onclick of the button below, create an array named <code>numList</code> of the
+      first 5 prime numbers starting at 2. Print out the items at index 0, 2, and 4.
+    </p>
+    <button onclick="problem2()">Test problem 2</button>
+  </section>
+</body>
+
+<script src="7.1-arrays-intro.js"></script>
+
+</html>
