@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.2 Adding to and Removing from Arrays</title>
+</head>
+
+<body>
+  <h1>7.2 Adding to and Removing from Arrays</h1>
+  <section>
+    <h2>Objectives</h2>
+    <p>
+      To be able to use the <code>.push()</code> and <code>.pop()</code> methods of an array to add and remove elements
+      from the array
+    </p>
+  </section>
+
+  <section>
+    <h2>Warm-up</h2>
+    <ol>
+      <li>Create a global variable called <code>favFoods</code> and assign it to be an array of strings that are your top
+        three favorite foods.</li>
+      <li>Use <code>console.log()</code> to print out each element to the console individually</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+    <h3>Arrays are Objects</h3>
+    <ul>
+      <li>An array is a JavaScript object</li>
+      <li>Array objects have built-in properties and methods to help us work with the array</li>
+      <li>Array properties will let us programmatically determine the length, add elements, remove elements, find
+        elements, sort elements, and more</li>
+    </ul>
+
+    <h3>Array Length</h3>
+    <p>
+      When you declare an array, it has a fixed length
+      <code>
+        <pre>
+var favFoods = [“Pizza”, “Burgers”, “Ice cream”];
+// favFoods has a length of 3
+var arr = [];
+// arr has a length of 0
+        </pre>
+      </code>
+    <ul>
+      <li>You can get the length of an array programmatically using the <code>.length</code> property</li>
+      <li>Array indices go from <code>0</code> to <code>arr.length - 1</code></li>
+      <li>If you try to access an element at an index outside this range, the element will be undefined (this is a
+        semantic or logic error)</li>
+      <li>See example in .js file</li>
+    </ul>
+    </p>
+
+    <h3>Adding elements to an array</h3>
+    <p>
+      There are several ways to add elements to an array. The most basic way is to use the
+      <code>.push(<i>newElement</i>)</code> method. The <code>.push()</code> method adds the element to the end of the array,
+      increasing its
+      length by 1. The <code>.push()</code> method returns the new length of the array.<br>
+      <br>
+      <u>Example</u> (see .js file)
+      <code>
+        <pre>
+var arr = [“red”, “green”, “blue”];
+arr.push(“orange”);
+        </pre>
+      </code>
+    </p>
+
+    <h3>Removing elements from an array</h3>
+    <p>
+      There are several ways of removing elements as well. The most basic way is to use the <code>.pop()</code> method.
+      The <code>.pop()</code> removes the last element from the array and returns it.<br>
+      <br>
+      <u>Example</u> (see .js file)
+      <code>
+  <pre>
+var arr = [“red”, “green”, “blue”];
+var lastElem = arr.pop();
+  </pre>
+</code>
+      After this code runs, arr will contain “red” and “green” and lastElem will contain “blue”<br>
+      <i>Note: You do not have do anything with the element returned by the .pop() method. You might just want to let it
+        disappear effectively deleting it from the array</i>
+
+    </p>
+  </section>
+
+  <section>
+    <h2>Problem #1</h2>
+    <p>Follow the steps below to complete this exercise. Use the button below to call the <code>problem1()</code> function to test your code periodically</p>
+    <button onclick="problem1()">Test</button>
+    <ol>
+      <li>Declare an empty array named <code>daysOfTheWeek</code> as a <b>global</b> variable</li>
+      <li>In the <code>problem1()</code> function, use <code>push()</code> to add each day of the week (Monday through Sunday, starting with Monday)</li>
+      <li>Define a <code>printDays()</code> function that will print each element from <code>daysOfTheWeek</code> to the console</li>
+      <li>Call the function from the <code>problem1()</code> function</li>
+      <li>Declare a second, empty array named <code>weekend</code> as a local variable in <code>problem1()</code></li>
+      <li>Use <code>pop()</code> to remove the last two elements of <code>daysOfTheWeek</code> and <code>push()</code> to add them to the <code>weekend</code> array</li>
+      <li>Call your <code>printDays()</code> function</li>
+      <li>Print each element in the <code>weekend</code> array</li>
+    </ol>
+  </section>
+</body>
+
+<script src="7.2-arrays-push-pop.js"></script>
+
+</html>
