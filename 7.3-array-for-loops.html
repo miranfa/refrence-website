@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.3 Iterating Through Arrays</title>
+</head>
+
+<body>
+  <h1>7.3 Iterating Through Arrays</h1>
+  <section>
+    <h2>Objectives</h2>
+    <p>
+      To be able to use a for loop to iterate through an array to access/modify the elements of the array
+    </p>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+    <h3>Iteration</h3>
+    <p>
+      The term <i>iteration</i> means to repeat a process. In programming, the term iteration is often used when working
+      with
+      loops and arrays since these often invole a repetitive process.<br>
+      To <i>iterate over an array</i> means to use a loop to access each element in an array.<br>
+      The <i>next iteration</i> means the next time in a repetitive process such as a loop.
+    </p>
+
+    <h3>Arrays and For Loops</h3>
+    <p>
+      For loops and arrays are best friends. The structure and syntax of a for loop is designed the way that it is to
+      work with arrays, lists, and other array-like data structures.<br>
+      To <i>iterate over</i> an entire array that <b>already has data</b> from the first element to the last element,
+    <ol>
+      <li>Set your counter variable to start at zero: <code style="color: red;">var i = 0;</code></li>
+      <li>Set the condition to be true while the counter is less than the array length: <code
+          style="color: green;">i &lt; arr.length</code></li>
+      <li>Increment the counter by 1: <code style="color: blue;">i++</code></li>
+    </ol>
+    <br>
+    <u>Example</u>
+    <code>
+        <pre>
+var arr = ["a", "b", "c", "d"];
+for (<span style="color: red;">var i = 0</span>; <span style="color: green;">i &lt; arr.length</span>; <span style="color: blue;">i++</span>){
+  // Print the element at the current index to the console
+  console.log(arr[i]);
+}
+        </pre>
+      </code>
+
+    <a href="7.3-array-for-loops.js">See examples in linked .js file</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Problem #1</h2>
+    <p>Write a program that outputs the product (the result of multiplying together) all of the elements in an array.
+
+      Create an array <code>arr</code> with the values <code>[1, 8, 3, 4, 2, 9]</code>.
+
+      The answer should be <code>1728</code>.</p>
+    <button onclick="problem1()">Test problem 1</button>
+  </section>
+
+  <section>
+    <h2>Problem #2</h2>
+    <p>
+      Write an algorithm that prints out a flight itinerary. A flight itinerary is a list
+      of cities, and should be output like this:<br>
+
+      If the flights array is <code>["San Francisco", "New York", "Chicago", "Honolulu"]</code><br>
+      Your algorithm prints <code>San Francisco -&gt; New York -&gt; Chicago -&gt; Honolulu</code> to the console.
+    </p>
+    <button onclick="problem2()">Test problem 2</button>
+  </section>
+
+  <section>
+    <h2>Problem #3</h2>
+    <p>
+      Write a function that doubles a list (creates a new list with two copies of each element in the original list).<br>
+      <br>
+      <code>function doubleList(arr)</code><br>
+      <br>
+      You should create a new array in the <code>doubleList(arr)</code> function, fill it with the correct elements, and
+      then <b>return</b> it. Then, you should print out the returned list from the <code>problem3()</code> function.
+
+      <code>
+        <pre>
+function problem3() {
+  var arr = [1,2,3,4];
+  var doubledArr = doubleList(arr);
+  console.log(doubledArr);
+}
+        </pre>
+      </code>
+
+      The code above should print 1,1,2,2,3,3,4,4 to the console when you have implemented the
+      <code>doubledArr(arr)</code> function correctly. Test your function with a variety of different arrays to make
+      sure it works in all situations.<br>
+    </p>
+    <button onclick="problem3()">Test problem 3</button>
+  </section>
+
+  <section>
+    <h2>Problem #4</h2>
+    <p>
+      Write a function called <code>onlyEvens(arr)</code> that takes an array and <b>returns</b> a new array
+      with only the even numbers of the original array.
+      Then, print out the new (returned) list from the <code>problem4()</code> function to the console.
+
+      <code>
+        <pre>
+function problem4() {
+  var arr = [1, 2, 3, 4, 5, 6];
+  var evens = onlyEvens(arr);
+  console.log(evens);
+}
+        </pre>
+      </code>
+      The code above should print 2, 4, 6 to the console when you have implemented the <code>onlyEvens(arr)</code>
+      function correctly.
+    </p>
+    <button onclick="problem4()">Test problem 4</button>
+  </section>
+
+  <section>
+    <h2>Problem #5</h2>
+    <p>
+      Write a function called <code>reverseList(arr)</code> that takes an array and <b>returns</b> a new array
+      that has all the same elements but in a reversed order
+      Then, you print out the new (returned) list from the <code>problem5()</code> function.
+
+      <code>
+        <pre>
+function problem5() {
+  var arr = [1,2,3,4];
+  var reversed = reverseList(arr);
+  console.log(reversed);
+}
+        </pre>
+      </code>
+      The code above should print 4, 3, 2, 1 to the console when you have implemented the <code>reverseList(arr)</code>
+      function correctly.<br>
+      <i>Hint: Start your counter variable at the last index and decrement the counter (i--)</i>
+    </p>
+    <button onclick="problem5()">Test problem 5</button>
+  </section>
+
+</body>
+
+<script src="7.3-array-for-loops.js"></script>
+
+</html>
