@@ -27,23 +27,36 @@
 
     <h3>Linear Search Algorithm</h3>
     <p>
-      <ol>
-        <li>Get array and target value</li>
-        <li>Set a counter to i = 0</li>
-        <li>Check if the element at arr[i] is equal to the target value</li>
-        <li>If element matches, return index (i). Otherwise increment i by 1 and repeat step 3</li>
-        <li>If the indez is greater than the last indez of the array, return -1 to indicate the target value was not found</li>
-      </ol>
+    <ol>
+      <li>Get array and target value</li>
+      <li>Set a counter to i = 0</li>
+      <li>Check if the element at arr[i] is equal to the target value</li>
+      <li>If element matches, return index (i). Otherwise increment i by 1 and repeat step 3</li>
+      <li>If the index is greater than the last indez of the array, return -1 to indicate the target value was not found
+      </li>
+    </ol>
     </p>
 
     <h3>Binary Search Algorithm</h3>
     <p>
-
+    <ol>
+      <li>Sort array in ascending order</li>
+      <li>Set the low index to 0 and high index to length - 1</li>
+      <li>Set middle index to average of low and high</li>
+      <li>If the middle index is the target, return the middle index</li>
+      <li>If the target element is less than the element at the middle index, set the high index to the middle index -1
+      </li>
+      <li>If the target element is greater than the element at the middle index, set the low index to the middle index +
+        1</li>
+      <li>Repeat steps 3-6 until low and high index are equal</li>
+      <li>Return -1 if element is not found</li>
+    </ol>
     </p>
 
     <h3>Algorithm Efficiency</h3>
     <p>
-
+      O(n) means that the maximum number of steps it will take to find and element in an array is equal to the number of
+      elements in the array
     </p>
   </section>
 </body>

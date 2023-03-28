@@ -18,10 +18,26 @@ function getRandomList() {
 
 // Linear Search Algorithm
 function linearSearch(target, array) {
+  // Get array and target value (passes as parameters)
 
+  // Set a counter i = 0 
+  for (var i = 0; i < array.length; i++) {
+    // Check if element at arr[i] is equal to target
+    if (array[i] == target) {
+      // If matches, return the index
+      return i;
+    }
+
+    // If not match increment i++, continue loop to next element 
+  }
+
+  // Return -1 when target is not found
+  return -1;
 }
 
+var testArray = [3, 21, 69, 80, 98, 102, 323]
 
+console.log(binarySearch(12, testArray));
 
 
 
@@ -31,16 +47,30 @@ function binarySearch(target, array) {
   // 1. Sort array
 
   // 2. Set the low index to 0 and high index to length - 1
+  var low = 0;
+  var high = array.length - 1;
 
-  // 3. Set middle index to average of low and high
+  while (low != high) {
+    // 3. Set middle index to average of low and high
+    var mid = (high + low) / 2;
 
-  // 4. If the middle index is the target, return the middle index
+    // 4. If the middle index is the target, return the middle index
+    if (array[mid] == target) {
+      return mid;
+    }
 
-  // 5. If the target element is less than the element at the middle index, set the high index to the middle index – 1
+    // 5. If the target element is less than the element at the middle index, set the high index to the middle index – 1
+    if (target < array[mid]) {
+      high = mid - 1;
+    }
 
-  // 6. If the target element is greater than the element at the middle index, set the low index to the middle index + 1
+    // 6. If the target element is greater than the element at the middle index, set the low index to the middle index + 1
+    if (target > array[mid]) {
+      low = mid + 1;
+    }
 
-  // 7. Repeat steps 3-6 until low and high index are equal
-
+    // 7. Repeat steps 3-6 until low and high index are equal
+  }
   // 8. Return -1 if element is not found
+  return -1;
 }
